@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.port": 5501,
+    "python.linting.enabled": false,
+
+    // "python.linting.pylintArgs": [
+    //     "--load-plugins",
+    //     "pylint_django"
+    // ]
+}
