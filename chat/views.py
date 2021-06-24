@@ -31,7 +31,7 @@ def user_list(request, pk=None):
     """
     if request.method == 'GET':
         if pk:
-            users = User.objects.filter(id=pk)
+            users = User.ojects.filter(id=pk)
         else:
             users = User.objects.all()
         serializer = UserSerializer(users, many=True, context={'request': request})
@@ -46,6 +46,11 @@ def user_list(request, pk=None):
         except Exception:
             return JsonResponse({'error': "Something went wrong"}, status=400)
 
+@csrf_exempt
+def ccontacts_lists(request, receiver=None, sender=None):
+    if request.method =='GET':
+        contacts = Contact.objects.filter(sender_id=sender, receiver_id=receiver, is_read=True)
+        
 
 @csrf_exempt
 def message_list(request, sender=None, receiver=None):

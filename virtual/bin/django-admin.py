@@ -1,4 +1,4 @@
-#!/home/moringa/Documents/DRF-Chat/virtual/bin/python
+#!/home/moringa/Documents/projects/Whatsapp-Chatbot/virtual/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
